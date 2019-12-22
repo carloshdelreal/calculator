@@ -20,6 +20,7 @@
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "function-call-argument-newline": "off"
+    "function-call-argument-newline": "off",
+    "arrow-body-style": "off"
   }
 }

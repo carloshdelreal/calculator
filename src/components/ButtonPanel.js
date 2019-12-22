@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import Button from './Button';
 
 const ButtonPanel = () => {

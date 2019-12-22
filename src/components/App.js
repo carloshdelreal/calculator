@@ -1,6 +1,4 @@
 import React from 'react';
-
-// eslint-disable-next-line sort-imports
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
