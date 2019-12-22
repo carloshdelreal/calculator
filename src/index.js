@@ -2,12 +2,10 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Calculator extends React.Component {
-  render() {
-    return (
-      <div>Todo React Calculator</div>
-    );
-  }
+function Calculator(){
+  return (
+    <h1>Todo React Calculator</h1>
+  );
 }
 
 ReactDOM.render(<Calculator />,
