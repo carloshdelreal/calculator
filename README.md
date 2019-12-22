@@ -1,3 +1,54 @@
+# Calculator
+
+A simple and intuitive calculator created using react
+
+**Calculator** is an implementation a calculator made using React JS.
+
+The project will be reviewed and approved by a **TSE** from [Microverse](https://microverse.org)
+
+## Tools used
+
+In this project we used:
+
+- HTML
+- CSS
+- JavaScript
+- JSX
+- ESLint
+- npm
+- Pretty
+
+# Author
+
+This project was created by:
+
+- Carlos Del Real [Github Account https://github.com/carloshdelreal](https://github.com/carloshdelreal)
+
+# Live Version
+
+You can find the stable version of this project [here Calculator](https://calculator-carlos.herokuapp.com/)
+
+# License
+
+All the source code in the [The Odin Project](https://www.theodinproject.com) is available jointly under the MIT License and the Beerware License.
+
+# Running Guide
+
+to get a running version of this project on your machine you have to install node and then follow the instructions, for installing Node go to the [node Oficial site https://nodejs.org/](https://nodejs.org/) and follow the installation instructions
+
+```Shell
+your@pc:~$ git clone https://github.com/carloshdelreal/calculator.git
+your@pc:~$ cd calculator
+your@pc:~$ npm install
+your@pc:~$ npm start
+
+```
+
+then yo are prompted to your browser to [http://localhost:3000/](http://localhost:3000/)
+
+
+# About This Project
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,27 +93,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
