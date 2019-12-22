@@ -2,14 +2,12 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Calculator(){
-  return (
-    <h1>Todo React Calculator</h1>
-  );
-}
+const Calculator = () => {
+  const hello = 'Hello, This will be a React Calculator';
+  return <h1>{hello}</h1>;
+};
 
-ReactDOM.render(<Calculator />,
-  document.getElementById('root'));
+ReactDOM.render(<Calculator />, document.getElementById('root'));
 
 /*
  * If you want your app to work offline and load faster, you can change
