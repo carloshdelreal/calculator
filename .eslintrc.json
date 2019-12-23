@@ -23,6 +23,6 @@
     "function-call-argument-newline": "off",
     "arrow-body-style": "off",
     "sort-imports": "off",
-    "no-unused-vars": "off"
+    "react/require-optimization": "off"
   }
 }

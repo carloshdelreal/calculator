@@ -13,7 +13,12 @@ const Button = (props) => {
     classes += 'basis-50';
   }
   return (
-    <button className={classes} type="button">
+    <button
+      className={classes}
+      // eslint-disable-next-line react/destructuring-assignment
+      onClick={props.onClick}
+      type="button"
+    >
       {btnLabel}
     </button>
   );
@@ -27,6 +32,7 @@ Button.defaultProps = {
 Button.propTypes = {
   btnLabel: PropTypes.string.isRequired,
   color: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
   // eslint-disable-next-line react/boolean-prop-naming
   wide: PropTypes.bool,
 };
