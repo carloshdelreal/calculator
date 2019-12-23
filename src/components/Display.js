@@ -1,15 +1,17 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const Display = (props) => {
-  // eslint-disable-next-line react/prop-types
   const { value } = props;
   return <div>{value}</div>;
 };
 
-/*
- * Display.propTypes = {
- *   value: PropTypes.string.re,
- * };
- */
+Display.defaultProps = {
+  value: '0',
+};
+
+Display.propTypes = {
+  value: PropTypes.string,
+};
 
 export default Display;
