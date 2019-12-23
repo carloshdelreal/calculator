@@ -3,9 +3,18 @@ import React from 'react';
 
 const Button = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { btnLabel } = props;
+  const { btnLabel, color, wide } = props;
+  let classes = 'calc-button';
+  if (color) {
+    classes += ' ';
+    classes += color;
+  }
+  if (wide) {
+    classes += ' ';
+    classes += 'basis-50';
+  }
   return (
-    <button className="calc-button" type="button">
+    <button className={classes} type="button">
       {btnLabel}
     </button>
   );
