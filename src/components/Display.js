@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Display = (props) => {
+const Display = () => {
   const value = '0';
   return (
     <div className="container display-container">

@@ -21,6 +21,7 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "function-call-argument-newline": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "sort-imports": "off"
   }
 }

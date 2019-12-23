@@ -20,8 +20,10 @@ const Button = (props) => {
   );
 };
 
-// Button.propTypes = {
-//   btnType: PropTypes.string.isRequired,
-// };
+/*
+ * Button.propTypes = {
+ *   btnType: PropTypes.string.isRequired,
+ * };
+ */
 
 export default Button;
