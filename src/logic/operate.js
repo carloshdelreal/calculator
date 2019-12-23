@@ -1,8 +1,9 @@
 const Big = require('big.js');
 
 const operate = (numberOne, numberTwo, operation) => {
-  const numberOneBig = new Big(numberOne);
-  const numberTwoBig = new Big(numberTwo);
+  console.log(`number: ${numberOne}, number2: ${numberTwo}, operation: ${operation}`);
+  const numberOneBig = Big(numberOne);
+  const numberTwoBig = Big(numberTwo);
   let result = null;
   const oneHundred = 100.0;
   switch (operation) {
@@ -12,7 +13,7 @@ const operate = (numberOne, numberTwo, operation) => {
     case '+':
       result = numberOneBig.plus(numberTwoBig);
       break;
-    case '*':
+    case 'X':
       result = numberOneBig.times(numberTwoBig);
       break;
     case '/':
@@ -25,7 +26,7 @@ const operate = (numberOne, numberTwo, operation) => {
       result = '0';
       break;
   }
-  return result;
+  return result.toString();
 };
 
 export default operate;

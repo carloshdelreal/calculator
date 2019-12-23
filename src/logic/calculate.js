@@ -1,19 +1,18 @@
 import operate from './operate';
 /* eslint-disable no-param-reassign */
 
+// eslint-disable-next-line max-statements
 const calculate = (calculator, buttonName) => {
-  let { total, next } = calculator;
+  const { operation, next } = calculator;
+  let { total } = calculator;
   const minusOne = -1;
   if (buttonName === '+/-') {
     total *= minusOne;
-    next *= minusOne;
-    calculator.total = total;
-    calculator.next = next;
+    calculator.total = total.toString();
   } else {
-    operate(total, next, buttonName);
-    calculator.total = total;
+    calculator.total = operate(total, next, operation);
+    calculator.operation = operation;
   }
-
   return calculator;
 };
 

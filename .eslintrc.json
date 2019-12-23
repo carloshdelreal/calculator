@@ -23,6 +23,9 @@
     "function-call-argument-newline": "off",
     "arrow-body-style": "off",
     "sort-imports": "off",
-    "react/require-optimization": "off"
+    "react/require-optimization": "off",
+    "no-ternary": "off",
+    "max-statements": "off",
+    "max-lines-per-function": "off"
   }
 }
