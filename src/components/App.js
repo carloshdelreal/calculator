@@ -58,34 +58,19 @@ class App extends React.Component {
   handleClick(buttonName) {
     const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     const operations = ['+/-', '%', '/', 'X', '-', '+', '='];
-
-    if (buttonName === 'AC' || this.state.total === 'Ma Error') {
-      this.setState({
-        next: null,
-        operation: null,
-        total: null,
-      });
-      return;
+    let { next, operation, total } = this.state;
+    if (buttonName === 'AC' || total === 'Ma Error') {
+      ({ next, operation, total } = { next: null, operation: null, total: null });
+    } else if (numbers.includes(buttonName)) {
+      ({ next, operation, total } = this.handleNumber(buttonName));
+    } else if (operations.includes(buttonName)) {
+      ({ next, operation, total } = this.handleOperation(buttonName));
     }
-
-    if (numbers.includes(buttonName)) {
-      const { next, operation, total: newTotal } = this.handleNumber(buttonName);
-      this.setState({
-        next,
-        operation,
-        total: newTotal,
-      });
-      return;
-    }
-
-    if (operations.includes(buttonName)) {
-      const { next, operation, total: newTotal } = this.handleOperation(buttonName);
-      this.setState({
-        next,
-        operation,
-        total: newTotal,
-      });
-    }
+    this.setState({
+      next,
+      operation,
+      total,
+    });
   }
 
   render() {
