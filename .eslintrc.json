@@ -24,6 +24,9 @@
     "max-statements": "off",
     "max-lines-per-function": "off",
     "array-element-newline": ["error", "consistent"],
-    "function-call-argument-newline": "off"
+    "function-call-argument-newline": "off",
+    "import/no-unresolved": "off",
+    "react/static-property-placement": "off",
+    "react/no-set-state": "off"
   }
 }

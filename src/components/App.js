@@ -83,7 +83,7 @@ class App extends React.Component {
     return (
       <div className="CalculatorApp">
         <Display value={value} />
-        <ButtonPanel onClick={(buttonName) => this.handleClick(buttonName)} />
+        <ButtonPanel onClick={buttonName => this.handleClick(buttonName)} />
       </div>
     );
   }
