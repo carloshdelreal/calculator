@@ -10,7 +10,9 @@ const calculate = (calculator, buttonName) => {
     total *= minusOne;
     calculator.total = total.toString();
   } else {
-    calculator.total = operate(total, next, operation);
+    calculator.total = operate(total,
+      next,
+      operation);
     calculator.operation = operation;
   }
   return calculator;

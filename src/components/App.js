@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    const numbers = ['0', '1','2', '3', '4', '5', '6', '7', '8', '9', '.'];
+    const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     const operations = ['+/-', '%', '/', 'X', '-', '+', '='];
     const { total, next, operation } = this.state;
 
@@ -57,7 +57,8 @@ class App extends React.Component {
       };
       if (operation === null || next === null) {
         if (buttonName === '+/-') {
-          const { total: calcTotal } = calculate(calculator, buttonName);
+          const { total: calcTotal } = calculate(calculator,
+            buttonName);
           this.setState({
             total: calcTotal,
           });
@@ -67,7 +68,8 @@ class App extends React.Component {
           });
         }
       } else {
-        const { total: calcTotal } = calculate(calculator, buttonName);
+        const { total: calcTotal } = calculate(calculator,
+          buttonName);
         if (buttonName === '=') {
           this.setState({
             next: null,
@@ -80,7 +82,7 @@ class App extends React.Component {
             total: calcTotal,
           });
         }
-      } 
+      }
     }
   }
 
