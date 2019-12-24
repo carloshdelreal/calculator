@@ -14,37 +14,21 @@ class App extends React.Component {
     };
   }
 
-  reset() {
-    this.setState({
-      next: null,
-      operation: null,
-      total: null,
-    });
-  }
-
   handleNumber(buttonName) {
-    const { total, next, operation } = this.state;
+    let { total, next } = this.state;
+    const { operation } = this.state;
     if (operation === null) {
       if (total === null) {
-        this.setState({
-          total: buttonName,
-        });
-        return;
+        total = buttonName;
+      } else {
+        total += buttonName;
       }
-      this.setState({
-        total: total + buttonName,
-      });
+    } else if (next === null) {
+      next = buttonName;
     } else {
-      if (next === null) {
-        this.setState({
-          next: buttonName,
-        });
-        return;
-      }
-      this.setState({
-        next: next + buttonName,
-      });
+      next += buttonName;
     }
+    return { next, operation, total };
   }
 
   handleOperation(buttonName) {
@@ -74,15 +58,23 @@ class App extends React.Component {
   handleClick(buttonName) {
     const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     const operations = ['+/-', '%', '/', 'X', '-', '+', '='];
-    const { total } = this.state;
 
-    if (buttonName === 'AC' || total === 'Ma Error') {
-      this.reset();
+    if (buttonName === 'AC' || this.state.total === 'Ma Error') {
+      this.setState({
+        next: null,
+        operation: null,
+        total: null,
+      });
       return;
     }
 
     if (numbers.includes(buttonName)) {
-      this.handleNumber(buttonName);
+      const { next, operation, total: newTotal } = this.handleNumber(buttonName);
+      this.setState({
+        next,
+        operation,
+        total: newTotal,
+      });
       return;
     }
 
