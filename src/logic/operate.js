@@ -1,11 +1,14 @@
 const Big = require('big.js');
 
 const operate = (numberOne, numberTwo, operation) => {
-  console.log(`number: ${numberOne}, number2: ${numberTwo}, operation: ${operation}`);
   const numberOneBig = Big(numberOne);
   const numberTwoBig = Big(numberTwo);
   let result = null;
   const oneHundred = 100.0;
+  const zero = '0';
+  if (operation === '/' && numberTwo === zero) {
+    return 'Ma Error';
+  }
   switch (operation) {
     case '-':
       result = numberOneBig.minus(numberTwoBig);

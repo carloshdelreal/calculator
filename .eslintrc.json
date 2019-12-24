@@ -23,6 +23,7 @@
     "no-ternary": "off",
     "max-statements": "off",
     "max-lines-per-function": "off",
-    "array-element-newline": ["error", "consistent"]
+    "array-element-newline": ["error", "consistent"],
+    "function-call-argument-newline": "off"
   }
 }
