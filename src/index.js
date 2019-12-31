@@ -1,16 +1,9 @@
-import './index.css';
+import './styles/index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
 
-class Calculator extends React.Component {
-  render() {
-    return (
-      <div>Todo React Calculator</div>
-    );
-  }
-}
-
-ReactDOM.render(<Calculator />,
+ReactDOM.render(<App />,
   document.getElementById('root'));
 
 /*
